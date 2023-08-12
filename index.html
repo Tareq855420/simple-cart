@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Simple Cart</title>
+</head>
+<body class="bg-light">
+
+    <h1 class="text-center">Shopping Cart</h1>
+
+    <div class="container my-5">
+
+        <!--card item 1-->
+        <div class="row bg-light my-5">
+            <div class="col-md-3">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-macbook-air-space-gray-m1-202010?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1634145627000" class="img-fluid mx-auto d-flex my-5" width="250" alt="macbook air">
+                <h5 class="text-center text-muted">Macbook Air 2023</h5>
+            </div>
+
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mt-5 pt-5">
+                    <button class="btn btn-danger m-2" onclick="productHandler('laptop',false)">Remove</button>
+                    <input type="number" class="form-control text-center" id="laptop-count" value="1">
+                    <button class="btn btn-success m-2" onclick="productHandler('laptop',true)">Add</button>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <h5 class="text-center mt-5 pt-5 text-muted">৳<span id="laptop-total">245000</span></h5>
+            </div>
+        </div>
+
+        <!--card item 2-->
+        <div class="row bg-light my-5">
+            <div class="col-md-3">
+                <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg" class="img-fluid mx-auto d-flex my-5" width="250" alt="iPhone-14-Pro-Max-9907">
+                <h5 class="text-center text-muted">iPhone 14 Pro Max</h5>
+            </div>
+
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mt-5 pt-5">
+                    <button class="btn btn-danger m-2" onclick="productHandler('phone',false)">Remove</button>
+                    <input type="number" class="form-control text-center" id="phone-count" value="1">
+                    <button class="btn btn-success m-2" onclick="productHandler('phone',true)">Add</button>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <h5 class="text-center mt-5 pt-5 text-muted">৳<span id="phone-total">176999</span></h5>
+            </div>
+        </div>
+
+        <div class="d-flex bg-white p-3">
+            <div class="col-md-8">
+                <h5>Subtotal:</h5>
+                <h5>TAX:</h5>
+                <h5>Total:</h5>
+            </div>
+
+            <div class="col-md-4 ps-5">
+                <h5>৳<span id="sub-total">421999</span></h5>
+                <h5>৳<span id="tax-amount">0</span></h5>
+                <h5>৳<span id="grand-total">421999</span></h5>
+            </div>
+
+        </div>
+        <button class="btn btn-info text-white mt-2" onclick="checkOut()">Check Out</button>
+
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
